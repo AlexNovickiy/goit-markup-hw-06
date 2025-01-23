@@ -765,3 +765,9 @@ h2 {
 .submit-form-button:focus {
     background-color:#404bbf;
 }
+
+/* HW-5 */
+body {
+    overflow-x: hidden;
+  }
+  
