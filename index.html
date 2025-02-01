@@ -57,7 +57,7 @@
           </ul>
         </address>
 
-        <button class="burger-btn" type="button">
+        <button class="burger-btn" type="button" data-menu-open>
           <svg class="burger-icon" width="24" height="24">
             <use
               href="./images/icons.svg#icon-heroicons-solid_menu-mobile"
@@ -66,9 +66,9 @@
         </button>
       </div>
 
-      <div class="mobile-menu">
+      <div class="mobile-menu" data-menu>
         <div class="container mobile-menu-container">
-          <button class="mobile-menu-close" type="button">
+          <button class="mobile-menu-close" type="button" data-menu-close>
             <svg class="form-icon-close" width="8" height="8">
               <use href="./images/icons.svg#icon-close"></use>
             </svg>
@@ -146,7 +146,9 @@
       <section class="section-main-title section">
         <div class="container hero-image">
           <h1 class="main-title">Effective Solutions for Your Business</h1>
-          <button class="title-button" type="button">Order Service</button>
+          <button class="title-button" type="button" data-modal-open>
+            Order Service
+          </button>
         </div>
       </section>
       <section class="section-advantages section">
@@ -350,7 +352,7 @@
                 height="260"
               />
               <div class="card-content-team">
-                <h3 class="title-team-member">Camila Garcia</h3>
+                <h3 class="title-team-member">Camilla Garcia</h3>
                 <p class="text-team">Marketing</p>
                 <ul class="list-social-icons">
                   <li class="item-icons">
@@ -472,7 +474,7 @@
           <h2 class="title-portfolio">Our Portfolio</h2>
           <ul class="list-portfolio">
             <li class="item-portfolio">
-              <div class="image-porfolio-item">
+              <div class="image-portfolio-item">
                 <picture>
                   <!-- Desktop screen -->
                   <source
@@ -516,7 +518,7 @@
               </div>
             </li>
             <li class="item-portfolio">
-              <div class="image-porfolio-item">
+              <div class="image-portfolio-item">
                 <picture>
                   <!-- Desktop screen -->
                   <source
@@ -560,7 +562,7 @@
               </div>
             </li>
             <li class="item-portfolio">
-              <div class="image-porfolio-item">
+              <div class="image-portfolio-item">
                 <picture>
                   <!-- Desktop screen -->
                   <source
@@ -604,7 +606,7 @@
               </div>
             </li>
             <li class="item-portfolio">
-              <div class="image-porfolio-item">
+              <div class="image-portfolio-item">
                 <picture>
                   <!-- Desktop screen -->
                   <source
@@ -648,7 +650,7 @@
               </div>
             </li>
             <li class="item-portfolio">
-              <div class="image-porfolio-item">
+              <div class="image-portfolio-item">
                 <picture>
                   <!-- Desktop screen -->
                   <source
@@ -692,7 +694,7 @@
               </div>
             </li>
             <li class="item-portfolio">
-              <div class="image-porfolio-item">
+              <div class="image-portfolio-item">
                 <picture>
                   <!-- Desktop screen -->
                   <source
@@ -809,9 +811,13 @@
     </footer>
 
     <!-- MODAL -->
-    <div class="modal-overlay">
+    <div class="modal-overlay" data-modal>
       <div class="modal">
-        <button class="form-closing-cross-button" type="button">
+        <button
+          class="form-closing-cross-button"
+          type="button"
+          data-modal-close
+        >
           <svg class="form-icon-close" width="8" height="8">
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
@@ -897,5 +903,8 @@
         </form>
       </div>
     </div>
+
+    <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

@@ -520,7 +520,7 @@ h2 {
     border-right: 1px solid #e7e9fc;
 }
 
-.image-porfolio-item {
+.image-portfolio-item {
     position: relative;
     overflow: hidden;
 }
@@ -799,8 +799,9 @@ h2 {
 
     opacity: 0;
     visibility: hidden;
+    transform: translateX(100%);
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 
 }
 
@@ -808,6 +809,7 @@ h2 {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
+    transform: translateX(0);
 }
 
 .mobile-menu-container {
@@ -961,12 +963,14 @@ h2 {
     z-index: 999;
     opacity: 0;
     pointer-events: none;
+    visibility: hidden;
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-overlay.is-open {
     opacity: 1;
     pointer-events: auto;
+    visibility: visible;
 }
 
 .modal {
@@ -981,6 +985,10 @@ h2 {
     border-radius: 4px;
     padding: 72px 16px 24px 16px;
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+}
+
+.modal-overlay:not(.is-open) .modal {
+    transform: translate(-50%, -50%) scale(1.5);
 }
 
 .form-closing-cross-button {
